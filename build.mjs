@@ -7,7 +7,7 @@ if (existsSync('.env')) {
     if (m) env[m[1]] = m[2].replace(/^"|"$/g, '');
   }
 }
-const version = 'v1';
+const version = 'v2';
 const title = env.SITE_TITLE || 'no title';
 mkdirSync('dist/assets', { recursive: true });
 writeFileSync('dist/index.html', `<!doctype html><title>${title}</title><h1>static ${version}</h1><p id="title">${title}</p>\n`);
